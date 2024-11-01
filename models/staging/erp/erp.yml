@@ -33,5 +33,19 @@ sources:
             data_tests:
               - unique
               - not_null
+      - name: customers
+        description: Tabela fonte com informações dos clientes da northwind.
+        columns:
+          - name: CUSTOMER_ID 
+            data_tests:
+              - unique
+              - not_null
+      - name: shippers
+        description: Tabela fonte com informações dos expedidores da northwind.
+        columns:
+          - name: SHIPPER_ID 
+            data_tests:
+              - unique
+              - not_null
     
               

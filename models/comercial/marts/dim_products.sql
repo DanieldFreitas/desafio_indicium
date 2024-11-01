@@ -1,8 +1,8 @@
 with
-    int_employess as(
+    int_products as(
         select *
         from {{ ref('int_products_categories') }}
     )
 
 select *
-from int_employess
+from int_products
