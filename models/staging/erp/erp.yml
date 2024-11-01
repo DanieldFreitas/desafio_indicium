@@ -29,9 +29,9 @@ sources:
       - name: SUPPLIERS
         description: Tabela fonte com informações dos fornecedor de produtos da northwind.
         columns:
-          - name: SUPPLIER_ID
+          - name: SUPPLIER_ID 
             data_tests:
               - unique
               - not_null
-      
+    
               

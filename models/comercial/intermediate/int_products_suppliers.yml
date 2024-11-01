@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: int_products_suppliers
+    description: Tabela intermediária da dimensão produto, que faz a junção entre a tabela de produtos e fornecedores.
+    columns:
+        - name: PK_PRODUTO           
+          description: Identificador único do produto (chave primária), usado para garantir unicidade na tabela.
+          data_tests:
+                  - unique
+                  - not_null
+    
+        - name: NOME_PRODUTO
+          description: Nome completo do produto, utilizado para identificação e consultas na tabela.
+    
+        - name: QUANTIDADE_POR_UNIDADE
+          description: Quantidade de itens por unidade de venda, importante para análise de estoque e vendas.
+    
+        - name: PRECO_POR_UNIDADE
+          description: Preço de venda por unidade do produto, relevante para análises de receita e margem de lucro.
+    
+        - name: UNIDADE_ESTOQUE
+          description: Quantidade de unidades do produto em estoque, usada para controle de inventário.
+    
+        - name: UNIDADE_POR_PEDIDO
+          description: Quantidade mínima que pode ser comprada por pedido, importante para controle de vendas e estoque.
+    
+        - name: NIVEL_PEDIDO
+          description: Nível de prioridade do pedido, utilizado para determinar a urgência de atendimento.
+    
+        - name: IS_DISCONTINUADO
+          description: Indica se o produto foi descontinuado (verdadeiro ou falso), útil para gestão de catálogo.
+    
+        - name: NOME_FORNECEDOR
+          description: Nome do fornecedor do produto, usado para identificação e para análises de fornecimento.
+    
+        - name: CIDADE_FORNECEDOR
+          description: Cidade onde o fornecedor está localizado, importante para análises logísticas e de distribuição.
+    
+        - name: PAIS_FORNECEDOR
+          description: País onde o fornecedor está localizado, usado para análises de mercado e cadeias de suprimentos.
