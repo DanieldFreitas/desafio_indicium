@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_employess
+    description: Tabela dimensional finalizada de funcionários, que centraliza informações detalhadas sobre os funcionários da empresa, incluindo dados demográficos, hierárquicos e geográficos, para análises e relatórios.
+    columns:
+      - name: PK_FUNCIONARIO             
+        description: Identificador único do funcionário (chave primária), garantindo a unicidade e identificação individual de cada funcionário.
+        data_tests:
+          - unique
+          - not_null   
+  
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário, utilizado para identificação e consultas na tabela.
+  
+      - name: NOME_GERENTE
+        description: Nome completo do gerente direto do funcionário, essencial para análises de supervisão e hierarquia.
+  
+      - name: CARGO_FUNCIONARIO
+        description: Cargo ou posição ocupada pelo funcionário, útil para categorizações e relatórios de estrutura organizacional.
+  
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário, utilizada para análises demográficas e de distribuição etária.
+  
+      - name: DT_CONTRATACAO
+        description: Data de contratação do funcionário, importante para cálculo de tempo de serviço e para análises de turnover.
+  
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade onde o funcionário reside, usada para análises regionais e de distribuição geográfica.
+  
+      - name: REGIAO_FUNCIONARIO
+        description: Região onde o funcionário reside, útil para segmentação e categorizações geográficas.
+  
+      - name: PAIS_FUNCIONARIO
+        description: País de residência do funcionário, importante para análises de diversidade e alcance geográfico da equipe.
+  
+      - name: GASTO_FUNCIONARIO
+        description: Valor total dos gastos associados ao funcionário, incluindo despesas como viagens, treinamentos, entre outros, utilizados para análise de custo individual e orçamentária.
+  

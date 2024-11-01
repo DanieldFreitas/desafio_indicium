@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_erp_employees
+    description: Tabela de preparação dos dados brutos dos funcionários, utilizada para centralizar e estruturar informações de colaboradores da empresa. Essa tabela armazena dados sobre os funcionários, incluindo seu gerente, cargo, localização e gastos associados, fornecendo uma base para análises e relatórios.
+    columns:
+    - name: PK_FUNCIONARIO
+      description: Identificador único do funcionário (chave primária), utilizado para diferenciar cada funcionário na tabela.
+
+    - name: FK_GERENTE
+      description: Identificador do gerente do funcionário (chave estrangeira), que relaciona o funcionário ao seu gerente direto.
+
+    - name: NOME_FUNCIONARIO
+      description: Nome completo do funcionário, usado para identificar o colaborador.
+
+    - name: CARGO_FUNCIONARIO
+      description: Cargo ou posição ocupada pelo funcionário na empresa, importante para categorização e análise de estrutura hierárquica.
+
+    - name: DT_NASCIMENTO_FUNCIONARIO
+      description: Data de nascimento do funcionário, usada para análises demográficas e cálculo de idade.
+
+    - name: DT_CONTRATACAO
+      description: Data de contratação do funcionário, importante para cálculo de tempo de serviço e análises de turnover.
+
+    - name: CIDADE_FUNCIONARIO
+      description: Cidade de residência do funcionário, utilizada para análises regionais e de localização.
+
+    - name: REGIAO_FUNCIONARIO
+      description: Região onde o funcionário reside, categorização útil para análises geográficas.
+
+    - name: PAIS_FUNCIONARIO
+      description: País de residência do funcionário, importante para relatórios e análises de alcance geográfico da força de trabalho.
+
+    - name: GASTO_FUNCIONARIO
+      description: Valor total dos gastos associados ao funcionário, que pode incluir despesas com viagens, treinamentos, entre outros.

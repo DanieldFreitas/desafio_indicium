@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: int_employees_preparation
+    description: Tabela intermediária para associar cada funcionário ao seu respectivo gerente, armazenando informações sobre o funcionário e seu relacionamento hierárquico direto com o gerente.
+    columns:
+        - name: PK_FUNCIONARIO             
+          description: Identificador único do funcionário (chave primária), usado para garantir unicidade na tabela.
+          data_tests:
+                  - unique
+                  - not_null
+    
+        - name: NOME_FUNCIONARIO
+          description: Nome completo do funcionário, utilizado para identificação e consultas na tabela.
+    
+        - name: NOME_GERENTE
+          description: Nome completo do gerente direto do funcionário, útil para análise de estrutura hierárquica e relatórios de supervisão.
+    
+        - name: CARGO_FUNCIONARIO
+          description: Cargo ou posição ocupada pelo funcionário, relevante para categorização e para análise de organograma.
+    
+        - name: DT_NASCIMENTO_FUNCIONARIO
+          description: Data de nascimento do funcionário, usada em análises demográficas e de distribuição etária.
+    
+        - name: DT_CONTRATACAO
+          description: Data de contratação do funcionário, importante para cálculo de tempo de serviço e análises de permanência.
+    
+        - name: CIDADE_FUNCIONARIO
+          description: Cidade de residência do funcionário, usada em análises de distribuição geográfica da equipe.
+    
+        - name: REGIAO_FUNCIONARIO
+          description: Região onde o funcionário reside, útil para segmentação por áreas geográficas.
+    
+        - name: PAIS_FUNCIONARIO
+          description: País de residência do funcionário, importante para relatórios e análises de diversidade geográfica da força de trabalho.
+    
+        - name: GASTO_FUNCIONARIO
+          description: Valor total dos gastos associados ao funcionário, incluindo despesas como viagens, treinamentos, entre outros, para avaliação de custo individual.
+    
+
