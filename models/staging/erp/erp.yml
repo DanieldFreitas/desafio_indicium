@@ -6,9 +6,32 @@ sources:
     schema: PUBLIC 
     tables:
       - name: employees
+        description: Tabela fonte com informações dos funcionarios da northwind.
         columns:
           - name: EMPLOYEE_ID
             data_tests:
               - unique
               - not_null
+      - name: products
+        description: Tabela fonte com informações dos produtos da northwind.
+        columns:
+          - name: PRODUCT_ID
+            data_tests:
+              - unique
+              - not_null
+      - name: categories
+        description: Tabela fonte com informações das categorias de produtos da northwind.
+        columns:
+          - name: CATEGORY_ID
+            data_tests:
+              - unique
+              - not_null
+      - name: SUPPLIERS
+        description: Tabela fonte com informações dos fornecedor de produtos da northwind.
+        columns:
+          - name: SUPPLIER_ID
+            data_tests:
+              - unique
+              - not_null
+      
               

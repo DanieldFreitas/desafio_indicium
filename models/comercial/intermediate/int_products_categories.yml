@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_products_categories
+    description: Tabela intermediária da dimensão produto, que faz a junção entre a tabela de produtos e a tabela de categorias.
+    columns:
+        - name: PK_PRODUTO           
+          description: Identificador único do produto (chave primária), usado para garantir unicidade na tabela.
+          data_tests:
+                  - unique
+                  - not_null
+    
+        - name: NOME_PRODUTO
+          description: Nome completo do produto, utilizado para identificação e consultas na tabela.
+    
+        - name: QUANTIDADE_POR_UNIDADE
+          description: Quantidade de itens por unidade de venda, importante para análise de estoque e vendas.
+    
+        - name: PRECO_POR_UNIDADE
+          description: Preço de venda por unidade do produto, relevante para análises de receita e margem de lucro.
+    
+        - name: UNIDADE_ESTOQUE
+          description: Unidade de medida do estoque, usada para controle de inventário.
+    
+        - name: UNIDADE_POR_PEDIDO
+          description: Quantidade mínima que pode ser comprada por pedido, importante para controle de vendas e estoque.
+    
+        - name: NIVEL_PEDIDO
+          description: Nível de prioridade do pedido, utilizado para determinar a urgência de atendimento.
+    
+        - name: IS_DISCONTINUADO
+          description: Indica se o produto foi descontinuado (verdadeiro ou falso), útil para gestão de catálogo.
+    
+        - name: NOME_CATEGORIA
+          description: Nome da categoria à qual o produto pertence, usado para análises de segmentação de mercado.
+    
+        - name: GDESCRICAO_CATEGORIA
+          description: Descrição detalhada da categoria do produto, importante para entendimento do posicionamento de mercado.
+
