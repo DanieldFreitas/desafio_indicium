@@ -47,5 +47,12 @@ sources:
             data_tests:
               - unique
               - not_null
+      - name: data
+        description: Tabela fonte com informações das datas.
+        columns:
+          - name: DATA_ID
+            data_tests:
+              - unique
+              - not_null
     
               
