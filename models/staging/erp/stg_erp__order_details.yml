@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: sgt_erp_order_details
+    columns:
+    - name: pk_pedido_item
+      description: teste
+      data_tests:
+        - unique
+        - not_null
+        
+            

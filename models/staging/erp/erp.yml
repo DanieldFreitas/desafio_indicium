@@ -54,5 +54,14 @@ sources:
             data_tests:
               - unique
               - not_null
+      - name: ORDERS
+        description: Tabela fonte com informações da tabela orders.
+        columns:
+          - name: ORDER_ID
+            data_tests:
+              - unique
+              - not_null
+      - name: ORDER_DETAILS
+
     
               
